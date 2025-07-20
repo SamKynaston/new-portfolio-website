@@ -1,17 +1,18 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Home from './Pages/Home.tsx'
 import Navigation from './Components/Navigation.tsx'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {routes} from './Components/Routes.tsx'
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
-        <Navigation />
-        <Router>
+        <BrowserRouter>
+            <Navigation pages={routes} />
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="*" element={<p>404</p>} />
+                {routes.map(({ path, element }) => (
+                    <Route key={path} path={path} element={element} />
+                ))}
             </Routes>
-        </Router>
+        </BrowserRouter>
     </StrictMode>,
 )
