@@ -1,4 +1,4 @@
-import type {Route} from "../Types/Routes.ts";
+import type {Route} from "../Types/Route.ts";
 import {Link} from "react-router-dom";
 
 interface NavigationProps {
@@ -8,11 +8,13 @@ interface NavigationProps {
 function Navigation({ pages }: NavigationProps) {
     return (
         <>
-            {pages.map((page: Route) => {
-                return (<Link to={page.path} key={page.path}>
-                    {page.name ?? page.path}
-                </Link>)
-            })}
+            {pages.map(page =>
+                page.ignore !== true && (
+                    <Link to={page.path} key={page.path}>
+                        {page.name ?? page.path}
+                    </Link>
+                )
+            )}
         </>
     )
 }
