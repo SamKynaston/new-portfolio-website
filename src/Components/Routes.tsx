@@ -1,8 +1,8 @@
-import type {Route} from "../Types/Route.ts";
+import type {Page} from "../Types/Page.ts";
 import Home from "../Pages/Home";
 import Error404 from "../Pages/404.tsx";
 
-export const routes: Route[] = [
-    { path: "/", element: <Home />, name: "Home" },
-    { path: "*", element: <Error404 />, name: "404", ignore: true },
+export const pages: Page[] = [
+    { title: "Home", path: "/", element: <Home /> },
+    { title: "Unknown", path: "*", element: <Error404 />, ignore: true },
 ];
