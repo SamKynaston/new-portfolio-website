@@ -5,3 +5,12 @@
 .Navigation .Navigation-Button {
     margin: 8px;
 }
+
+.Content {
+    padding: 16px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
