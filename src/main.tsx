@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import Navigation from './Components/Navigation.tsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { pages } from './Components/Routes.tsx'
+import "./prototype.css"
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
