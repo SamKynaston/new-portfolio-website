@@ -6,12 +6,20 @@ body {
     @apply bg-black text-white;
 }
 
+.Content {
+    @apply max-w-lg px-4 py-4 mx-auto flex flex-col items-center;
+}
+
 .Navigation {
-    @apply flex;
+    @apply flex text-black bg-white;
 }
 
 .Navigation-Button {
-    @apply flex;
+    @apply p-4;
+}
+
+.Navigation-Button:hover {
+    @apply bg-black text-white;
 }
 
 h1 {
