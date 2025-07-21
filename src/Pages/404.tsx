@@ -3,7 +3,8 @@ import Page from "../Components/Page.tsx";
 function Error404() {
     return (
         <Page>
-            <p>404</p>
+            <h1>Content Not Found</h1>
+            <h2>Nothing but chickens here!</h2>
         </Page>
     )
 }
