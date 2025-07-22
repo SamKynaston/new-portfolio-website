@@ -14,6 +14,8 @@ createRoot(document.getElementById('root')!).render(
                     <Route key={path} path={path} element={element} />
                 ))}
             </Routes>
+            {/* Placeholder for the footer */}
+            <Navigation pages={pages} />
         </BrowserRouter>
     </StrictMode>,
 )
